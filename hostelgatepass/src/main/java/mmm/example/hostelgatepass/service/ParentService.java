@@ -20,7 +20,7 @@ public class ParentService {
     @Autowired
     private GatePassRepository gatePassRepo;
 
-    // ==================== LOGIN ====================
+    // ===================== LOGIN ====================
     public Parent validateLogin(String email, String password) {
         Optional<Parent> optionalParent = parentRepo.findByEmailAndPassword(email, password);
         return optionalParent.orElse(null); // returns null if login fails
